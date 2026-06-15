@@ -60,8 +60,11 @@ export function NodeShape({
 
   const hasIcon = def?.icon && def?.faChar;
   const isExtra = def?.renderExtra && node;
-  // Left-aligned label after grip + icon; centered for widget nodes without an icon.
-  const labelX = hasIcon ? 34 : (isExtra ? width / 2 : 16);
+  // Widget nodes (buttons, slider) render their own controls and, like the
+  // design system, have no signal grip - just an icon and title header.
+  const hasGrip = !isExtra;
+  const iconX = hasGrip ? 22 : 15;
+  const labelX = hasIcon ? (hasGrip ? 34 : 29) : (isExtra ? width / 2 : 16);
   const labelAnchor = hasIcon ? 'start' : (isExtra ? 'middle' : 'start');
 
   return (
@@ -121,24 +124,26 @@ export function NodeShape({
         def.renderBody({ node, width, height, onInteraction: onBodyInteraction })
       ) : (
         <>
-          {/* Signal grip */}
-          <rect
-            className="node-grip"
-            x={3}
-            y={3}
-            width={GRIP_W}
-            height={Math.max(8, height - 6)}
-            rx={2}
-            ry={2}
-            fill={sigColor}
-            pointerEvents="none"
-          />
+          {/* Signal grip (standard nodes only; widgets have none) */}
+          {hasGrip && (
+            <rect
+              className="node-grip"
+              x={2.5}
+              y={2.5}
+              width={GRIP_W}
+              height={Math.max(8, height - 5)}
+              rx={1.5}
+              ry={1.5}
+              fill={sigColor}
+              pointerEvents="none"
+            />
+          )}
 
           {/* Icon */}
           {hasIcon && (
             <text
               className={def?.faBrand ? 'node-icon-brand' : 'node-icon'}
-              x={22}
+              x={iconX}
               y={headerHeight / 2}
               fontSize="13"
               fill={sigColor}
