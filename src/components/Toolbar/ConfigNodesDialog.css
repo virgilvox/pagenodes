@@ -75,7 +75,7 @@
   background: rgba(255, 152, 0, 0.1);
   border: 1px solid rgba(255, 152, 0, 0.3);
   border-radius: 4px;
-  color: #ff9800;
+  color: var(--warn);
   font-size: 12px;
 }
 
@@ -134,7 +134,7 @@
 }
 
 .config-node-item.orphaned .config-node-users {
-  color: #ff9800;
+  color: var(--warn);
 }
 
 .config-node-delete {
@@ -154,7 +154,7 @@
 }
 
 .config-node-delete:hover {
-  color: #e53935;
+  color: var(--danger);
   background: rgba(229, 57, 53, 0.1);
 }
 
@@ -183,7 +183,7 @@
 .config-dialog-footer .btn-danger {
   background: rgba(229, 57, 53, 0.1);
   border-color: rgba(229, 57, 53, 0.3);
-  color: #e53935;
+  color: var(--danger);
 }
 
 .config-dialog-footer .btn-danger:hover {

@@ -74,7 +74,7 @@
   min-height: 200px;
   padding: 10px;
   font-size: 12px;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-family: var(--mono);
   line-height: 1.4;
   background: var(--input-bg);
   border: 1px solid var(--border-color);
@@ -98,7 +98,7 @@
   background: rgba(229, 57, 53, 0.1);
   border: 1px solid rgba(229, 57, 53, 0.3);
   border-radius: 4px;
-  color: #e53935;
+  color: var(--danger);
   font-size: 12px;
 }
 

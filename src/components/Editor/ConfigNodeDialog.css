@@ -126,8 +126,8 @@
 
 .config-dialog-footer .btn-delete {
   background: transparent;
-  border-color: #e53935;
-  color: #e53935;
+  border-color: var(--danger);
+  color: var(--danger);
 }
 
 .config-dialog-footer .btn-delete:hover {
