@@ -8,6 +8,7 @@
   --hair:#DBD2C0; --ink:#1B1A16; --smoke:#6C6557; --faint:#A79E8C;
   --edge:#1B1A16;
   --volt:#5B4DF1; --volt-soft:#ECE9FE; --volt-ink:#3A2FC4;
+  --logo-node:var(--card);
   --sig-in:#0E9DB8; --sig-out:#2E9E4F; --sig-fn:#DC8638;
   --sig-ai:#8257F0; --sig-logic:#CC9A28; --sig-net:#3B7DD8; --sig-audio:#1FA0A0;
   --warn:#D98A1F; --danger:#C0392B;
@@ -50,6 +51,7 @@
   --hair:#363D47; --ink:#E9ECF1; --smoke:#9AA3AE; --faint:#6B7480;
   --edge:#10131A;
   --volt:#8479FF; --volt-soft:#2A2750; --volt-ink:#B6AEFF;
+  --logo-node:#E7EAEF;
   --sig-in:#34C3DC; --sig-out:#57C97A; --sig-fn:#F0A65C;
   --sig-ai:#A98BFF; --sig-logic:#F2C25A; --sig-net:#6BA4F2; --sig-audio:#3FC2C2;
   --warn:#F2B33D; --danger:#FF6B6B;
